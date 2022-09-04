@@ -1,4 +1,44 @@
 baseURL = 'https://adelinewei.github.io/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'The Fun Corner'
 theme = "loveit"
+
+[params]
+    # LoveIt theme version
+    version = "0.2.X"
+    [params.home]
+        [params.home.profile]
+            subtitle = ""   # TODO: add some words for this website
+            typeit = false
+    [params.header]
+        mobileMode = "auto"
+        [params.header.title]
+            name = "The Fun Corner"
+
+[menu]
+    [[menu.main]]
+		identifier = "posts"
+		pre = ""
+		post = ""
+		name = "Posts"
+		url = "/posts/"
+		titel = ""
+		weight = 1
+
+	[[menu.main]]
+		identifier = "tags"
+		pre = ""
+		post = ""
+		name = "Tags"
+		url = "/tags/"
+		title = ""
+		weight = 2
+
+	[[menu.main]]
+		identifier = "about"
+		pre = ""
+		post = ""
+		name = "About"
+		url = "/about/"
+		title = ""
+		weight = 3
