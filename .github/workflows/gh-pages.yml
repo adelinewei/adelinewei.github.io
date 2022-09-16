@@ -23,10 +23,13 @@ jobs:
           hugo-version: '0.102.3'
           extended: true
 
-      - name: Prepare Valine
+      - name: Prepare Environment Secrets
         run: |
-          sed -i 's/appId = ""/appId = "${{ secret.VALINE_APP_ID }}"' config.toml
-          sed -i 's/appKey = ""/appKey = "${{ secret.VALINE_APP_KEY }}"' config.toml
+          sed -i 's/VALINE_APP_ID/${{ secrets.VALINE_APP_ID }}/' config.toml
+          sed -i 's/VALINE_APP_KEY/${{ secrets.VALINE_APP_KEY }}/' config.toml
+        env:
+          VALINE_APP_ID: ${{ secrets.VALINE_APP_ID }}
+          VALINE_APP_KEY: ${{ secrets.VALINE_APP_KEY }}
 
       - name: Build
         run: hugo --minify

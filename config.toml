@@ -30,8 +30,8 @@ theme = "loveit"
 		[params.page.comment]
 			[params.page.comment.valine]
 				enable = true
-				appId = ""
-				appKey = ""
+				appId = "VALINE_APP_ID"
+				appKey = "VALINE_APP_KEY"
 				placeholder = ""
 				avatar = "mp"
 				meta= ""
