@@ -6,6 +6,8 @@ theme = "loveit"
 [params]
     # LoveIt theme version
     version = "0.2.X"
+	defaultTheme = "light"
+
     [params.home]
         [params.home.profile]
             subtitle = ""   # TODO: add some words for this website
@@ -14,6 +16,26 @@ theme = "loveit"
         mobileMode = "auto"
         [params.header.title]
             name = "The Fun Corner"
+	[params.footer]
+		since = 2022
+
+	[params.page]
+		[params.page.share]
+			enable = true
+			Linkedin = true
+			Twitter = false
+			Facebook = false
+			HackerNews = false
+			Weibo = false
+		[params.page.comment]
+			[params.page.comment.valine]
+				enable = true
+				appId = ""
+				appKey = ""
+				placeholder = ""
+				avatar = "mp"
+				meta= ""
+				pageSize = 10
 
 [menu]
     [[menu.main]]
@@ -42,3 +64,12 @@ theme = "loveit"
 		url = "/about/"
 		title = ""
 		weight = 3
+
+	[[menu.main]]
+		identifier = "github"
+		pre = "<i class='fa-brands fa-github fa-lg' aria-hidden='true'></i>"
+		post = ""
+		name = ""
+		url = "https://github.com/adelinewei"
+		title = ""
+		weight = 4
