@@ -28,14 +28,12 @@ theme = "loveit"
 			HackerNews = false
 			Weibo = false
 		[params.page.comment]
+			enable = true
 			[params.page.comment.valine]
 				enable = true
 				appId = "VALINE_APP_ID"
 				appKey = "VALINE_APP_KEY"
-				placeholder = ""
-				avatar = "mp"
-				meta= ""
-				pageSize = 10
+				serverURLs = "https://f1vaxezi.api.lncldglobal.com"
 	[params.search]
 		enable = true
 		type = "algolia"
