@@ -23,6 +23,11 @@ jobs:
           hugo-version: '0.102.3'
           extended: true
 
+      - name: Prepare Valine
+        run: |
+          sed -i 's/appId = ""/appId = "${{ secret.VALINE_APP_ID }}"' config.toml
+          sed -i 's/appKey = ""/appKey = "${{ secret.VALINE_APP_KEY }}"' config.toml
+
       - name: Build
         run: hugo --minify
 
