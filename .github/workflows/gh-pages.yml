@@ -27,9 +27,13 @@ jobs:
         run: |
           sed -i 's/VALINE_APP_ID/${{ secrets.VALINE_APP_ID }}/' config.toml
           sed -i 's/VALINE_APP_KEY/${{ secrets.VALINE_APP_KEY }}/' config.toml
+          sed -i 's/ALGOLIA_APP_ID/${{ secrets.ALGOLIA_APP_ID }}/' config.toml
+          sed -i 's/ALGOLIA_SEARCH_KEY/${{ secrets.ALGOLIA_SEARCH_KEY }}/' config.toml
         env:
           VALINE_APP_ID: ${{ secrets.VALINE_APP_ID }}
           VALINE_APP_KEY: ${{ secrets.VALINE_APP_KEY }}
+          ALGOLIA_APP_ID: ${{ secrets.ALGOLIA_APP_ID }}
+          ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
 
       - name: Build
         run: hugo --minify

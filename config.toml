@@ -36,6 +36,13 @@ theme = "loveit"
 				avatar = "mp"
 				meta= ""
 				pageSize = 10
+	[params.search]
+		enable = true
+		type = "algolia"
+		[params.search.algolia]
+			index = "content"
+			appID = "ALGOLIA_APP_ID"
+			searchKey = "ALGOLIA_SEARCH_KEY"
 
 [menu]
     [[menu.main]]
