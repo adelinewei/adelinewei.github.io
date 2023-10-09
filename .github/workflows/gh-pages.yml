@@ -36,7 +36,7 @@ jobs:
           ALGOLIA_SEARCH_KEY: ${{ secrets.ALGOLIA_SEARCH_KEY }}
 
       - name: Build
-        run: hugo --minify
+        run: hugo --minify -e production
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
